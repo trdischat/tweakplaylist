@@ -1,0 +1,14 @@
+#playlists li.playlist .sound-control i.fas.fa-square {
+  color: red;
+}
+
+#playlists li.playlist .sound-control i.fas.fa-play {
+  color: lime;
+}
+
+#playlists li.playlist .sound-control.inactive i.fas {
+  color: #777;
+}
+#playlists li.playlist .sound-control.disabled i.fas {
+  color: #555;
+}

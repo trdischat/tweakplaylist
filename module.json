@@ -1,0 +1,14 @@
+{
+  "name": "playlist",
+  "title": "Enhanced Playlist",
+  "description": "Various enhancements to Foundry playlist functions.",
+  "version": "0.4.1",
+  "minimumCoreVersion": "0.4.1",
+  "author": "trdischat",
+  "scripts": ["./scripts/patchSound.js"],
+  "styles": ["./css/patchStyles.css"],
+  "packs": [],
+  "url": "https://github.com/trdischat/playlist",
+  "manifest": "https://raw.githubusercontent.com/trdischat/playlist/master/module.json",
+  "download": "https://github.com/trdischat/playlist/archive/master.zip"
+}
