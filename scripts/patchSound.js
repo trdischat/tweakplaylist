@@ -80,7 +80,7 @@ replaceDefaultOptions = function(class_) {
   Object.defineProperty(class_, 'defaultOptions', {
     get: function () {
       def_options = class_._sound_config_defaultOptions;
-      def_options.template = def_options.template.replace("templates/playlist/", "modules/playlist/templates/")
+      def_options.template = def_options.template.replace("templates/playlist/", "modules/tweakplaylist/templates/")
       return def_options
     }
   });
