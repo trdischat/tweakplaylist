@@ -7,7 +7,7 @@ Module to enhance various functions of Foundry playlists:
 Patches rely on the **patchClass** utility function.
 
 # Installation
-See https://github.com/foundry-vtt-community/wiki/wiki/Modules#installing-modules. Open the Add-on Modules tab in the Configuration and Setup dialog. Click Install Module, paste `https://raw.githubusercontent.com/trdischat/playlist/master/module.json` in as the Manifest URL, then click Install.
+See https://github.com/foundry-vtt-community/wiki/wiki/Modules#installing-modules. Open the Add-on Modules tab in the Configuration and Setup dialog. Click Install Module, paste `https://raw.githubusercontent.com/trdischat/tweakplaylist/master/module.json` in as the Manifest URL, then click Install.
 
 As DM go to the `Manage Modules` options menu in the Game Settings for your World, then enable the `Enhanced Playlist` module.
 

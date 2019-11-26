@@ -1,5 +1,5 @@
 {
-  "name": "playlist",
+  "name": "tweakplaylist",
   "title": "Enhanced Playlist",
   "description": "Various enhancements to Foundry playlist functions.",
   "version": "0.4.1",
@@ -8,7 +8,7 @@
   "scripts": ["./scripts/patchSound.js"],
   "styles": ["./css/patchStyles.css"],
   "packs": [],
-  "url": "https://github.com/trdischat/playlist",
-  "manifest": "https://raw.githubusercontent.com/trdischat/playlist/master/module.json",
-  "download": "https://github.com/trdischat/playlist/archive/master.zip"
+  "url": "https://github.com/trdischat/tweakplaylist",
+  "manifest": "https://raw.githubusercontent.com/trdischat/tweakplaylist/master/module.json",
+  "download": "https://github.com/trdischat/tweakplaylist/archive/master.zip"
 }
