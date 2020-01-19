@@ -42,19 +42,19 @@ if (patchedPlaylistDirectoryClass == undefined) {
  */
 function patchPlaylistClass() {
     newClass = patchClass(Playlist, Playlist.prototype._onEnd, 5,
-      `if ( sound.repeat ) return;`,
-      `if ( sound.repeat ) {
+      `if (sound.repeat) return;`,
+      `if (sound.repeat) {
       if ( sound.flags.mindelay === undefined || sound.flags.maxdelay === undefined) return;
       else {
         let p = this;
-        p.updateSound({id: sound.id, playing: false});
+        p.updateEmbeddedEntity("PlaylistSound", {_id: sound._id, playing: false});
         let tMin = sound.flags.mindelay;
         let tMax = sound.flags.maxdelay;
         let tDelay = Math.floor( 1000 * ( tMin + ( Math.random() * (tMax-tMin) ) ) );
-        setTimeout( function() { p.updateSound({id: sound.id, playing: true}); }, tDelay);
+        setTimeout( function() { p.updateEmbeddedEntity("PlaylistSound", {_id: sound._id, playing: true}); }, tDelay);
         return;}}`);
     if (!newClass) return;
-    newClass = patchClass(newClass, Playlist.prototype.playSound, 12,
+    newClass = patchClass(newClass, Playlist.prototype.playSound, 10,
       `let vol = sound.volume * game.settings.get("core", "globalPlaylistVolume");`,
       `let minVol = ( sound.flags.minvolume === undefined ) ? 1.0 : parseFloat(sound.flags.minvolume);
       let volAdj = ( minVol === 1.0 ) ? 1.0 : Math.pow( minVol + ( Math.random() * ( 1 - minVol )), 2);
