@@ -53,10 +53,15 @@ if (CONFIG._tweakplaylist_module_allowrandom) {
     // Retrieve the sound object whose reference may have changed
     const sound = this.getEmbeddedEntity("PlaylistSound", soundId);
     if (sound.repeat) {                                        // ! Changed line
-      if ( sound.flags.mindelay === undefined || sound.flags.maxdelay === undefined) return;
+      if ( sound.flags.mindelay === undefined || sound.flags.maxdelay === undefined | sound.flags.maxdelay === 0) return;
       else {
         let p = this;
         p.updateEmbeddedEntity("PlaylistSound", {_id: sound._id, playing: false});
+        if (sound.flags.mindelay > sound.flags.maxdelay) {
+          let newflags = sound.flags;
+          newflags.mindelay = sound.flags.maxdelay;
+          p.updateEmbeddedEntity("PlaylistSound", {_id: sound._id, flags: newflags});
+        }
         let tMin = sound.flags.mindelay;
         let tMax = sound.flags.maxdelay;
         let tDelay = Math.floor( 1000 * ( tMin + ( Math.random() * (tMax-tMin) ) ) );
