@@ -1,10 +1,9 @@
-# Enhanced Playlist
-Module to enhance various functions of Foundry playlists:
-* Only display playlists to the GM.
-* New parameters for sounds in playlists allow for random loop delays and random volume adjustments between repeated plays of the sound.
-* CSS styles to add color to Play and Stop buttons in playlists.
+# Tweak Playlist
+Configurable options to enhance various functions of Foundry playlists:
+* Only display playlists to the GM. (disabled by default)
+* New parameters for sounds in playlists allow for random loop delays and random volume adjustments between repeated plays of the sound.  (disabled by default)
 
-Patches rely on the **patchClass** utility function.
+Also uses custom CSS styles to add color to Play and Stop buttons in playlists.
 
 # Installation
 See https://github.com/foundry-vtt-community/wiki/wiki/Modules#installing-modules. Open the Add-on Modules tab in the Configuration and Setup dialog. Click Install Module, paste `https://raw.githubusercontent.com/trdischat/tweakplaylist/master/module.json` in as the Manifest URL, then click Install.
