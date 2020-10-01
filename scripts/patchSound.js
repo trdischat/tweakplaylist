@@ -61,8 +61,9 @@ class trdisPlaylist {
         }
       }`);
     if (!newClass) return;
+    let pLine = isNewerVersion('0.7.3', game.data.version) ? 10 : 9;
     Playlist.prototype._onEnd = newClass.prototype._onEnd;
-    newClass = trPatchLib.patchMethod(newClass, "playSound", 10,
+    newClass = trPatchLib.patchMethod(newClass, "playSound", pLine,
     `let vol = sound.volume * game.settings.get("core", "globalPlaylistVolume");`,
     `let minVol = ( sound.flags.minvolume === undefined ) ? 1.0 : parseFloat(sound.flags.minvolume);
     let volAdj = ( minVol === 1.0 ) ? 1.0 : Math.pow( minVol + ( Math.random() * ( 1 - minVol )), 2);
