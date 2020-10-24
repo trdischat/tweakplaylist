@@ -1,13 +1,15 @@
 <form autocomplete="off" onsubmit="event.preventDefault();">
     <div class="form-group">
-        <label>Track Name</label>
+        <label>{{ localize "PLAYLIST.SoundName" }}</label>
         <input type="text" name="name" placeholder="Name" value="{{name}}" data-dtype="String"/>
     </div>
 
     <div class="form-group">
-        <label>Audio Source</label>
-        {{filePicker target="path" type="audio"}}
-        <input class="image" type="text" name="path" placeholder="path/audio.mp3" value="{{path}}" data-dtype="String"/>
+        <label>{{ localize "PLAYLIST.SoundSrc" }}</label>
+        <div class="form-fields">
+            {{filePicker target="path" type="audio"}}
+            <input class="image" type="text" name="path" placeholder="path/audio.mp3" value="{{path}}"/>
+        </div>
     </div>
 
     <div class="form-group">
@@ -23,11 +25,6 @@
     </div>
 
     <div class="form-group">
-        <label>Repeat</label>
-        <input type="checkbox" name="repeat" data-dtype="Boolean" {{checked repeat}}/>
-    </div>
-
-    <div class="form-group">
         <label>Minimum Delay</label>
         <input type="number" name="flags.mindelay" placeholder="Delay in Seconds" value="{{flags.mindelay}}" title="Delay in Seconds" data-dtype="Number"/>
     </div>
@@ -37,5 +34,14 @@
         <input type="number" name="flags.maxdelay" placeholder="Delay in Seconds" value="{{flags.maxdelay}}" title="Delay in Seconds" data-dtype="Number"/>
     </div>
 
-    <button type="submit" name="submit" value="1"><i class="far fa-save"></i> Update Track</button>
+    <div class="form-group">
+        <label>{{ localize "PLAYLIST.SoundRepeat" }}</label>
+        <input type="checkbox" name="repeat" data-dtype="Boolean" {{checked repeat}}/>
+    </div>
+
+    <div class="form-group">
+        <label>{{ localize "PLAYLIST.SoundStreaming" }}</label>
+        <input type="checkbox" name="streaming" data-dtype="Boolean" {{checked streaming}}/>
+    </div>
+    <button type="submit" name="submit" value="1"><i class="far fa-save"></i> {{ localize "PLAYLIST.SoundUpdate" }}</button>
 </form>

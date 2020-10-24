@@ -2,7 +2,7 @@
   "name": "tweakplaylist",
   "title": "Tweak Playlist",
   "description": "Various enhancements to Foundry playlist functions.",
-  "version": "0.4.5.9",
+  "version": "0.4.5.10",
   "minimumCoreVersion": "0.4.5",
   "compatibleCoreVersion": "0.7.5",
   "author": "trdischat",
