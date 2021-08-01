@@ -1,4 +1,8 @@
 # Tweak Playlist
+
+**This module is only compatible with Foundry through version 0.7.9. It will not work with version 0.8.x or later. The entire Foundry audio engine changed after 0.7.x. Therefore, this module will not be updated for 0.8.x and will only remain to support older versions of FVTT. The hidden tracks feature is separately available in the [Hidden Soundtracks](https://foundryvtt.com/packages/hiddensoundtracks) module. If you are interested in random delays and volume changes, you should express your support for this feature in the [Foundry core](https://gitlab.com/foundrynet/foundryvtt/-/issues/4718), in the [SoundBoard](https://github.com/BlitzKraig/fvtt-SoundBoard/issues/48) module, or in the [Soundscape](https://github.com/CDeenen/Soundscape/issues/5) module.**
+
+---
 Configurable options to enhance various functions of Foundry playlists:
 * Only display playlists to the GM. (disabled by default)
 * New parameters for sounds in playlists allow for random loop delays and random volume adjustments between repeated plays of the sound.  (disabled by default)
